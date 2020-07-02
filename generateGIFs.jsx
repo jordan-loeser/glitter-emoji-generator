@@ -6,8 +6,6 @@ if (!Object.keys) {
 // Configuration
 var emojiNamePrefix = "glitter-";
 
-SaveGIF('output', 'test');
-
 // Main Function
 (function main() {
     // Get Document Information
