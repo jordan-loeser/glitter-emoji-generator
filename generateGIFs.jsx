@@ -13,6 +13,15 @@ var emojiNamePrefix = "glitter-";
     var symbols = loadJSON("symbols.json");
     var symbolKeys = Object.keys(symbols);
 
+    // Optionally get color
+    var textColor = getColorpickerColor();
+    if (textColor !== false) {
+        for(var j = 0; j < frameGroup.layers.length; j++) {
+            var frame = frameGroup.layers[j];
+            frame.textItem.color = textColor;
+        }
+    }
+
     // For each symbol
     for(var i = 0; i < symbolKeys.length; i++) {
         var key = symbolKeys[i];
@@ -33,6 +42,15 @@ var emojiNamePrefix = "glitter-";
     alert('Operation complete!');
 })();
 
+function getColorpickerColor() {
+    if (app.showColorPicker()) {
+        return app.foregroundColor;
+    }
+    else {
+        return false;
+    }
+};
+
 function SaveGIF(outputFolderName, fileName) {
     var doc = app.activeDocument;
     var docPath = activeDocument.path.fullName;
@@ -48,7 +66,7 @@ function SaveGIF(outputFolderName, fileName) {
     if(!outputFolder.exists) outputFolder.create();
 
     doc.exportDocument(file, ExportType.SAVEFORWEB, sfw)
-}
+};
 
 function loadJSON(relPath) {
     var script = new File($.fileName);
@@ -59,4 +77,4 @@ function loadJSON(relPath) {
     jsonFile.close();
 
     return JSON.parse(str);
-}
+};
