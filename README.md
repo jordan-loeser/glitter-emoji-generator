@@ -10,7 +10,7 @@ A Photoshop script that generates glittery text emoijis compatible with Slack. :
 
 Optionally, you can [upload the GIFs as emojis to slack](https://slack.com/help/articles/206870177-Add-custom-emoji). I recommend using [Neutral Face Emoji Tools](https://chrome.google.com/webstore/detail/slack-emoji-tools/anchoacphlfbdomdlomnbbfhcmcdmjej) for bulk emoji uploading.
 
-## Configure Cusom Emojis
+## Configure Custom Emojis
 To create custom symbols not outlined below, update `symbols.json`. Each `"key": "value"` pair represents an emoji name and a character to glitterize respectively.
 
 ## Included Emoijs
