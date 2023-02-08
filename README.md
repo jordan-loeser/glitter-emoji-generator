@@ -1,5 +1,5 @@
 # glitter-emoji-generator :sparkles:
-A Photoshop script that generates glittery text emoijis compatible with Slack. :dizzy:
+A Photoshop script that generates glittery text emoijis compatible with Slack and Discord. :dizzy:
 
 ## Usage
 1. Download or clone the repository
